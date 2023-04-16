@@ -1,14 +1,14 @@
 <mat-card id="inputForm">
   <form (submit)="onAddReview(reviewForm)" #reviewForm = "ngForm">
     <mat-form-field id="titleFormField">
-      <input matInput name="reviewTitle" placeholder="Title" ngModel>
+      <input matInput name="reviewTitle" placeholder="Title" ngModel required="true">
     </mat-form-field>
     <ngb-rating [max]="5" name="reviewRating" id="reviewRatingField"></ngb-rating>
     <mat-form-field id="reviewFormField">
       <textarea matInput rows="10" name="reviewBody" placeholder="Add review" ngModel></textarea>
     </mat-form-field>
     <mat-form-field id="nameFormField">
-      <input matInput name="reviewName" placeholder="Name" ngModel>
+      <input matInput name="reviewName" placeholder="Name" ngModel required="true">
     </mat-form-field>
     <button mat-raised-button type="submit" color="primary">Publish Review</button>
   </form>
