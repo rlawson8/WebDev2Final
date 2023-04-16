@@ -1,0 +1,27 @@
+#inputForm {
+  width: 50%;
+  align-items: center;
+  margin: auto;
+}
+form {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+#titleFormField {
+  width: 75%;
+}
+#reviewFormField {
+  width: 100%;
+}
+#reviewRatingField {
+  width: 25%;
+  font-size: 40px;
+}
+#nameFormField {
+  width: 100%;
+}
+button {
+  width: 50%;
+  margin: 10px;
+}
