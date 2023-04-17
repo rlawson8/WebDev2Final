@@ -13,5 +13,6 @@ export class ReviewCreateComponent {
 
   onAddReview(form: NgForm){
     this.reviewsService.addReviews(form.value.reviewTitle, form.value.reviewBody, form.value.reviewRating, form.value.reviewName);
+    form.resetForm();
   }
 }

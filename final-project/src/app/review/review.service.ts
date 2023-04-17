@@ -8,7 +8,7 @@ export class ReviewService {
 
   }
 
-  addReviews(title: string, body: string, rating: number, name:string){
+  addReviews(title: string, description: string, stars: number, user:string){
 
   }
 }
