@@ -9,7 +9,7 @@ form {
   text-align: center;
 }
 #titleFormField {
-  width: 75%;
+  width: 73%;
 }
 #reviewFormField {
   width: 100%;
@@ -17,6 +17,7 @@ form {
 #reviewRatingField {
   width: 25%;
   font-size: 2.5vw;
+  margin-left: 1%;
 }
 #nameFormField {
   width: 100%;
