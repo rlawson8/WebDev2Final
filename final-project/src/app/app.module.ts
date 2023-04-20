@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { ReviewCreateComponent } from './review/review-create/review-create.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header-component';
+import { ReviewListComponent } from './review/review-list/review-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HeaderComponent } from './header/header-component';
     ReviewCreateComponent,
     FooterComponent,
     HeaderComponent,
+    ReviewListComponent,
   ],
   imports: [
     BrowserModule,
