@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { ReviewCreateComponent } from './review/review-create/review-create.component';
@@ -35,6 +36,7 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
     MatButtonModule,
     MatToolbarModule,
     NgbModule,
+    HttpClientModule,
     MatMenuModule,
   ],
   providers: [],

@@ -1,14 +1,18 @@
 <mat-card id="inputForm">
   <form (submit)="onAddReview(reviewForm)" #reviewForm = "ngForm">
     <mat-form-field id="titleFormField">
-      <input matInput name="reviewTitle" placeholder="Title" ngModel required="true">
+      <input matInput name="reviewTitle" placeholder="Title" ngModel #title="ngModel" required="true">
+      <mat-error *ngIf="title.invalid">Please enter a movie title before submitting</mat-error>
     </mat-form-field>
-    <ngb-rating [max]="5" name="reviewRating" id="reviewRatingField"></ngb-rating>
+    <ngb-rating [max]="5" name="reviewRating" id="reviewRatingField" ngModel #rating="ngModel" required="true"></ngb-rating>
+    <mat-error *ngIf="reviewForm.submitted && rating.invalid">Please select a rating.</mat-error>
     <mat-form-field id="reviewFormField">
-      <textarea matInput rows="10" name="reviewBody" placeholder="Add review" ngModel></textarea>
+      <textarea matInput rows="10" name="reviewBody" placeholder="Add review" ngModel #body="ngModel" required="true"></textarea>
+      <mat-error *ngIf="body.invalid">Please enter a review before submitting</mat-error>
     </mat-form-field>
     <mat-form-field id="nameFormField">
-      <input matInput name="reviewName" placeholder="Name" ngModel required="true">
+      <input matInput name="reviewName" placeholder="Name" ngModel #name="ngModel" required="true">
+      <mat-error *ngIf="name.invalid">Please enter a name before submitting</mat-error>
     </mat-form-field>
     <button mat-raised-button type="submit" color="primary">Publish Review</button>
   </form>
