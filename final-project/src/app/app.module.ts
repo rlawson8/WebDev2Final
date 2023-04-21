@@ -12,6 +12,7 @@ import { ReviewCreateComponent } from './review/review-create/review-create.comp
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

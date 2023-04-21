@@ -8,10 +8,13 @@ import { ReviewService } from "../review.service";
   styleUrls:['../styles.css']
 })
 export class ReviewCreateComponent {
-
   constructor(public reviewsService: ReviewService){}
 
   onAddReview(form: NgForm){
+    if(form.invalid){
+      return;
+    }
+
     this.reviewsService.addReviews(form.value.reviewTitle, form.value.reviewBody, form.value.reviewRating, form.value.reviewName);
     form.resetForm();
   }
