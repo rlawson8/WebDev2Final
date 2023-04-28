@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <button mat-button [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>Review List</button>
-    <button mat-menu-item>Review Create</button>
+    <button routerLink="/" mat-menu-item>View Reviews</button>
+    <button routerLink="/addReview" mat-menu-item>Add a Review</button>
   </mat-menu>
 </mat-toolbar>

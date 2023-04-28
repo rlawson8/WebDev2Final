@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span>
+        {{ review.title }}
+      </span>
+      <span>
+        <ngb-rating
+          [max]="5"
+          [rate]="review.stars"
+          [readonly]="true"
+        ></ngb-rating>
+      </span>
+    </mat-card-title>
+    <mat-card-subtitle>{{ review.user }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ review.description }}
+    </p>
+    <p>
+      {{ formatDate(review.createdAt) }}
+    </p>
+  </mat-card-content>
+</mat-card>
