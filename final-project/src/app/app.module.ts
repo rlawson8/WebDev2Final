@@ -12,21 +12,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxMasonryModule } from 'ngx-masonry';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ReviewCreateComponent } from './review/review-create/review-create.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReviewListComponent } from './review/review-list/review-list.component';
 import { ReviewListItemComponent } from './review/review-list/review-list-item/review-list-item.component';
-
-const routes: Routes = [
-  { path: '', component: ReviewListComponent },
-  { path: 'addReview', component: ReviewCreateComponent },
-];
+import { HeaderComponent } from './header/header-component';
 
 @NgModule({
   declarations: [
@@ -35,6 +31,7 @@ const routes: Routes = [
     FooterComponent,
     ReviewListComponent,
     ReviewListItemComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,14 +45,12 @@ const routes: Routes = [
     NgbModule,
     HttpClientModule,
     MatMenuModule,
-    AppRoutingModule,
     MatGridListModule,
     FlexLayoutModule,
     NgxMasonryModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [RouterModule],
 })
 export class AppModule {}
