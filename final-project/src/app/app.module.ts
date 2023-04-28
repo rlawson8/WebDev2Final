@@ -10,12 +10,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ReviewCreateComponent } from './review/review-create/review-create.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header-component';
 import { ReviewListComponent } from './review/review-list/review-list.component';
 
 @NgModule({
@@ -23,7 +23,6 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
     AppComponent,
     ReviewCreateComponent,
     FooterComponent,
-    HeaderComponent,
     ReviewListComponent,
   ],
   imports: [
@@ -38,6 +37,7 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
     NgbModule,
     HttpClientModule,
     MatMenuModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

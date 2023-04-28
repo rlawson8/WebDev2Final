@@ -1,3 +1,9 @@
-<header-component></header-component>
-<review-create></review-create>
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/list">Review List</button>
+    <button mat-menu-item routerLink="/create">Review Create</button>
+  </mat-menu>
+</mat-toolbar>
+<router-outlet></router-outlet>
 <footer-component></footer-component>
