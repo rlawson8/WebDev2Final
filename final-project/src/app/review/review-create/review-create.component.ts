@@ -1,21 +1,26 @@
-import { Component } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { ReviewService } from "../review.service";
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ReviewService } from '../review.service';
 
 @Component({
-  selector:'review-create',
+  selector: 'review-create',
   templateUrl: './review-create.component.html',
-  styleUrls:['../styles.css']
+  styleUrls: ['../styles.css'],
 })
 export class ReviewCreateComponent {
-  constructor(public reviewsService: ReviewService){}
+  constructor(public reviewsService: ReviewService) {}
 
-  onAddReview(form: NgForm){
-    if(form.invalid){
+  onAddReview(form: NgForm) {
+    if (form.invalid) {
       return;
     }
 
-    this.reviewsService.addReviews(form.value.reviewTitle, form.value.reviewBody, form.value.reviewRating, form.value.reviewName);
+    this.reviewsService.addReviews(
+      form.value.reviewTitle,
+      form.value.reviewBody,
+      form.value.reviewRating,
+      form.value.reviewName
+    );
     form.resetForm();
   }
 }

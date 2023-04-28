@@ -2,10 +2,17 @@ var express = require("express");
 var mongoose = require("mongoose");
 var Review = require("./models/review");
 var bodyParser = require("body-parser");
+var cors = require("cors");
 
 const app = express();
 const port = 3000;
 app.use(bodyParser.json());
+app.use(
+  cors({
+    origin: "http://localhost:4200",
+    credentials: false,
+  })
+);
 
 const mongoURI =
   "mongodb+srv://team8:team8password@webdev2final.rnnizt5.mongodb.net/?retryWrites=true&w=majority";
