@@ -1,0 +1,21 @@
+@media screen and (max-width: 600px) {
+  .masonry-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .masonry-item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .masonry-item {
+    width: 25%;
+  }
+}
+
+.masonry-item {
+  padding: 10px;
+}

@@ -1,1 +1,7 @@
-<p>review-list works!</p>
+<div class="content">
+  <ngx-masonry [options]="masonryOptions" [ordered]="true">
+    <div ngxMasonryItem class="masonry-item" *ngFor="let review of reviews">
+      <review-list-item [review]="review"></review-list-item>
+    </div>
+  </ngx-masonry>
+</div>

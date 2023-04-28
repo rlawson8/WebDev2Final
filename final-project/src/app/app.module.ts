@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -12,11 +13,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 import { AppComponent } from './app.component';
 import { ReviewCreateComponent } from './review/review-create/review-create.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReviewListComponent } from './review/review-list/review-list.component';
+import { ReviewListItemComponent } from './review/review-list/review-list-item/review-list-item.component';
+
+const routes: Routes = [
+  { path: '', component: ReviewListComponent },
+  { path: 'addReview', component: ReviewCreateComponent },
+];
 
 @NgModule({
   declarations: [
@@ -24,6 +34,7 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
     ReviewCreateComponent,
     FooterComponent,
     ReviewListComponent,
+    ReviewListItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,8 +49,13 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
     HttpClientModule,
     MatMenuModule,
     AppRoutingModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    NgxMasonryModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [RouterModule],
 })
 export class AppModule {}
