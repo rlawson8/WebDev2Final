@@ -1,0 +1,29 @@
+version: '3.0' # specify docker-compose version
+ 
+# Define the services/ containers to be run
+services:
+ final-project: # name of the first service
+  build: 
+    context: final-project
+    dockerfile: Dockerfile
+  ports:
+  - "4200:80" # specify port mapping
+ 
+ api: # name of the second service
+  build: 
+    context: api
+    dockerfile: Dockerfile
+  # hostname: backend
+  ports:
+  - "3000:3000" #specify ports mapping
+  restart: on-failure
+  links:
+  - database # link this service to the database service
+ 
+ database: # name of the third service
+  hostname: database
+  build:
+    context: database
+    dockerfile: Dockerfile
+  # ports:
+  #   - "27017:27017"
