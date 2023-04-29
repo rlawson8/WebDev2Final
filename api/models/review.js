@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-let Schema = mongoose.Schema;
+// let Schema = mongoose.Schema;
 
-let reviewSchema = new Schema(
+let reviewSchema = mongoose.Schema(
   {
     title: {
       type: String,
@@ -23,6 +23,6 @@ let reviewSchema = new Schema(
   { timestamps: true } // This adds a "createdAt" and "updatedAt" attribute to the Review model.
 );
 
-let Review = mongoose.model("reviews", reviewSchema);
+// let Review = mongoose.model("reviews", reviewSchema);
 
-module.exports = Review;
+module.exports = mongoose.model("reviews", reviewSchema);
