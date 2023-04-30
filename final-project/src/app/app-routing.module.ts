@@ -5,7 +5,7 @@ import { ReviewListComponent } from './review/review-list/review-list.component'
 import { ReviewCreateComponent } from './review/review-create/review-create.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/create', pathMatch: 'full' },
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: 'list', component: ReviewListComponent },
   { path: 'create', component: ReviewCreateComponent },
 ];
