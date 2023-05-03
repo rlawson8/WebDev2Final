@@ -24,11 +24,3 @@ services:
       dockerfile: Dockerfile
     # hostname: backend
     restart: on-failure
-    links:
-    - database # link this service to the database service
-
-  database: # name of the third service
-    hostname: database
-    build:
-      context: database
-      dockerfile: Dockerfile

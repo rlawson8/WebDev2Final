@@ -17,13 +17,3 @@ services:
   ports:
   - "3000:3000" #specify ports mapping
   restart: on-failure
-  links:
-  - database # link this service to the database service
- 
- database: # name of the third service
-  hostname: database
-  build:
-    context: database
-    dockerfile: Dockerfile
-  # ports:
-  #   - "27017:27017"
